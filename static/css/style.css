@@ -1,10 +1,53 @@
-body {
+/* Reset default padding and margin for all elements */
+html,
+body,
+#map {
+  width: 100%;
+  height: 100%;
   padding: 0;
   margin: 0;
 }
 
-#map,
-body,
-html {
-  height: 100%;
+/* Improve styling for the legend container */
+.legend {
+  padding: 10px;
+  font: 14px Arial, Helvetica, sans-serif;
+  border-radius: 10px;
+  color: #000;
+  background-color: #fff;
+  width: 200px; /* Remove fixed width */
+}
+
+/* Adjust styling for the legend color squares */
+.legend i {
+  float: left;
+  width: 20px; /* Adjust the size of the color squares */
+  height: 20px; /* Set the same height as the width */
+  margin-right: 10px; /* Reduce the space between squares and labels */
+  opacity: 1.0;
+}
+
+/* Ensure vertical alignment of legend items */
+.legend p {
+  margin: 0; /* Remove default margin for <p> elements */
+  line-height: 20px; /* Set the same line-height as the square height */
+}
+
+/* Ensure that each legend row has a fixed height */
+.legend .legend-row {
+  height: 20px; /* Set the same height as the square width/height */
+  clear: both; /* Clear floats to ensure vertical alignment */
+}
+
+/* Ensure the legend is displayed properly on the map */
+.leaflet-bottom.leaflet-left {
+  width: 85%;
+}
+
+/* Add space below the timeline controls */
+.leaflet-control-container .leaflet-timeline-controls {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  margin-bottom: 16px;
 }
